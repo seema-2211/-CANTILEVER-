@@ -1,5 +1,5 @@
 import numpy as np
-
+from tensorflow.keras.callbacks import ModelCheckpoint
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import (
     Input,
@@ -7,7 +7,6 @@ from tensorflow.keras.layers import (
     LSTM,
     Dense
 )
-
 encoder_input = np.load(
     "data/processed/encoder_input.npy"
 )
@@ -85,11 +84,17 @@ model.compile(
 )
 
 model.summary()
+checkpoint = ModelCheckpoint(
+    "models/best_chatbot.keras",
+    monitor="val_loss",
+    save_best_only=True,
+    verbose=1
+)
 history = model.fit(
     [encoder_input, decoder_input],
     decoder_output,
     batch_size=64,
-    epochs=5,
+    epochs=15,
     validation_split=0.1
 )
 

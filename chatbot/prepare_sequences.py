@@ -27,13 +27,29 @@ encoder_input = pad_sequences(
     padding="post"
 )
 
+decoder_input = []
+decoder_output = []
+
+for seq in answer_seq:
+
+    if len(seq) < 2:
+        continue
+
+    decoder_input.append(seq[:-1])
+
+    decoder_output.append(seq[1:])
+
 decoder_input = pad_sequences(
-    answer_seq,
+    decoder_input,
+    maxlen=max_len,
+    padding="post"
+
+)
+decoder_output = pad_sequences(
+    decoder_output,
     maxlen=max_len,
     padding="post"
 )
-
-decoder_output = np.copy(decoder_input)
 
 np.save(
     "data/processed/encoder_input.npy",
@@ -51,4 +67,7 @@ np.save(
 )
 
 print("Encoder shape:", encoder_input.shape)
-print("Decoder shape:", decoder_input.shape)
+print("Decoder Input shape:", decoder_input.shape)
+print("Decoder Output shape:", decoder_output.shape)
+
+print("Saved sequence files.")

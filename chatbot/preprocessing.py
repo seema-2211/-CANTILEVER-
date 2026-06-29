@@ -70,8 +70,14 @@ with open(
             answer = clean_text(lines[ids[i + 1]])
 
             if question and answer:
-                questions.append(question)
-                answers.append(answer)
+
+              questions.append(question)
+
+              answers.append(
+              "startseq "
+              + answer
+              + " endseq"
+              )
 
 print(f"Question-Answer pairs: {len(questions)}")
 

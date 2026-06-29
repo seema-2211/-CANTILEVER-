@@ -1,52 +1,42 @@
-# Python
+## Python
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Virtual environments
+# Virtual Environments
 venv/
-env/
-.venv/
-
-# Conda
+.env/
 .env
-
-# Jupyter
-.ipynb_checkpoints/
-
-# VS Code
-.vscode/
 
 # macOS
 .DS_Store
 
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset files
+data/raw/
+data/processed/*.npy
+
+# Trained models
+models/*.keras
+models/*.model
+models/*.h5
+models/*.pkl
+
 # Logs
 *.log
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
 
 # Build files
 build/
 dist/
 *.egg-info/
 
-# Models
-models/*.keras
-models/*.h5
-models/*.pkl
-
-# Dataset files
-data/raw/
-data/processed/
-
-# Environment variables
-.env
-
 # Flask
 instance/
-.webassets-cache
-
-# Pytest
-.pytest_cache/
-
-# Coverage
-.coverage
-htmlcov/
