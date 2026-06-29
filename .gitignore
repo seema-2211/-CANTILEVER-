@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Conda
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Build files
+build/
+dist/
+*.egg-info/
+
+# Models
+models/*.keras
+models/*.h5
+models/*.pkl
+
+# Dataset files
+data/raw/
+data/processed/
+
+# Environment variables
+.env
+
+# Flask
+instance/
+.webassets-cache
+
+# Pytest
+.pytest_cache/
+
+# Coverage
+.coverage
+htmlcov/
