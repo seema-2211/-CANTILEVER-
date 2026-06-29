@@ -6,6 +6,8 @@ This project is an NLP-based chatbot developed using Python, Word2Vec, LSTM, and
 
 The chatbot is trained on the Cornell Movie Dialog Corpus and uses Natural Language Processing techniques to preprocess text, generate embeddings, and generate conversational responses through a web interface.
 
+ project link - https://cantilever-mzcf.onrender.com
+
 ## Features
 
 * Text preprocessing and cleaning
