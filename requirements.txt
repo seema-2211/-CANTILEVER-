@@ -24,6 +24,7 @@ gast==0.7.0
 gensim==4.4.0
 google-pasta==0.2.0
 grpcio==1.81.1
+gunicorn==26.0.0
 h11==0.16.0
 h5py==3.16.0
 hf-xet==1.5.1
